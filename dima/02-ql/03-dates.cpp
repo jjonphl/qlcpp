@@ -43,9 +43,33 @@ void DateTesting2() {
     cout << "Serial number: " << serialNum << endl;
 }
 
+void DateTesting3() { // static functions
+    cout << "Today: " << Date::todaysDate() << endl;
+    cout << "Min Date: " << Date::minDate() << endl;
+    cout << "Max Date: " << Date::maxDate() << endl;
+    cout << "Is leap year?: " << Date::isLeap(2011) << endl;
+    cout << "End of month: " << Date::endOfMonth(Date(4,Aug,2009)) << endl;
+    cout << "Is month end?: " << Date::isEndOfMonth(Date(29,Sep,2009)) << endl;
+    cout << "Is month end?: " << Date::isEndOfMonth(Date(30,Sep,2009)) << endl;
+    cout << "Next week day: " << Date::nextWeekday(Date(1,Sep,2009), Friday) << endl;
+    cout << "nth week day: " << Date::nthWeekday(3, Wed, Sep, 2009) << endl;
+}
+
+void DateTesting4() {
+    Date d = Settings::instance().evaluationDate();
+
+    cout << "Eval date (default): " << d << endl;
+
+    Settings::instance().evaluationDate() = Date(5, Jan, 1995);
+    d = Settings::instance().evaluationDate();
+    cout << "Eval date (after): " << d << endl;
+}
+
 int main(int argc, char *argv[]) {
     //DateTesting1();
-    DateTesting2();
+    //DateTesting2();
+    //DateTesting3();
+    DateTesting4();
     
     return 0;
 }
