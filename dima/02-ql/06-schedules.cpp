@@ -73,12 +73,13 @@ void scheduleTesting3() {
 int main(int argc, char *argv[]) {
 
     // last date should be 2012-06-15, but I'm producing 2012-06-29!! wtf!
-    //cout << "Forward: \n";
-    //scheduleTesting1(DateGeneration::Forward);
+    cout << "Forward: \n";
+    scheduleTesting1(DateGeneration::Forward);
 
     //cout << "\n\nBackward: \n";
     //scheduleTesting1(DateGeneration::Backward);
 
-    scheduleTesting3();
+    //scheduleTesting3();
+    
     return 0;
 }
