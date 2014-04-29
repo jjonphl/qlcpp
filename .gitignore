@@ -2,3 +2,9 @@
 *.exe
 *.o
 *.gch
+R/*.Rproj*
+R/.Rhistory
+R/*.md
+R/*.html
+R/figure
+.Rproj.user
