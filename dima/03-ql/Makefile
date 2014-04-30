@@ -19,3 +19,7 @@ interpolation.exe: 03-interpolation.cpp qlpch.gch
 matrices.exe: 04-matrices.cpp qlpch.gch
 	g++ -c -Wall -I${BOOST} -I${QUANTLIB_H} $< -o $(patsubst %.exe,%.o,$@)
 	g++ -L${QUANTLIB_LIB} $(patsubst %.exe,%.o,$@) -o $@ -lQuantLib 
+
+optimization.exe: 05-optimization.cpp qlpch.gch
+	g++ -c -Wall -I${BOOST} -I${QUANTLIB_H} $< -o $(patsubst %.exe,%.o,$@)
+	g++ -L${QUANTLIB_LIB} $(patsubst %.exe,%.o,$@) -o $@ -lQuantLib 
