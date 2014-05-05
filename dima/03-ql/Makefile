@@ -43,3 +43,7 @@ intrates.exe: 09-intrates.cpp qlpch.gch
 yieldcurves.exe: 10-yieldcurves.cpp qlpch.gch
 	g++ -c -Wall -I${BOOST} -I${QUANTLIB_H} $< -o $(patsubst %.exe,%.o,$@)
 	g++ -L${QUANTLIB_LIB} $(patsubst %.exe,%.o,$@) -o $@ -lQuantLib 
+
+volsmiles.exe: 11-volsmiles.cpp qlpch.gch
+	g++ -c -Wall -I${BOOST} -I${QUANTLIB_H} $< -o $(patsubst %.exe,%.o,$@)
+	g++ -L${QUANTLIB_LIB} $(patsubst %.exe,%.o,$@) -o $@ -lQuantLib 

@@ -53,11 +53,6 @@ void testYield2() {
     cout << "1Y3M-1Y6M fwd rate: " << curve.forwardRate(d1, d1+3*Months, dc, Continuous) << endl;
 }
 
-template<class T, size_t N>
-size_t size(T (&)[N]) {
-    return N;
-}
-
 vector<boost::shared_ptr<RateHelper> > getRateHelpers() {
     vector<boost::shared_ptr<RateHelper> > instruments;
 
