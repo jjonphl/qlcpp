@@ -47,3 +47,11 @@ yieldcurves.exe: 10-yieldcurves.cpp qlpch.gch
 volsmiles.exe: 11-volsmiles.cpp qlpch.gch
 	g++ -c -Wall -I${BOOST} -I${QUANTLIB_H} $< -o $(patsubst %.exe,%.o,$@)
 	g++ -L${QUANTLIB_LIB} $(patsubst %.exe,%.o,$@) -o $@ -lQuantLib 
+
+payoffex.exe: 12-payoffex.cpp qlpch.gch
+	g++ -c -Wall -I${BOOST} -I${QUANTLIB_H} $< -o $(patsubst %.exe,%.o,$@)
+	g++ -L${QUANTLIB_LIB} $(patsubst %.exe,%.o,$@) -o $@ -lQuantLib 
+
+blackscholes.exe: 13-blackscholes.cpp qlpch.gch
+	g++ -c -Wall -I${BOOST} -I${QUANTLIB_H} $< -o $(patsubst %.exe,%.o,$@)
+	g++ -L${QUANTLIB_LIB} $(patsubst %.exe,%.o,$@) -o $@ -lQuantLib 
